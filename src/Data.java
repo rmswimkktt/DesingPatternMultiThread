@@ -19,15 +19,22 @@ public class Data {
 		changed = true;
 	}
 	
-	public synchronized void save() throws IOException{
+//	public synchronized void save() throws IOException{
+	public void save() throws IOException{
 		if(!changed){
+			System.out.println("Bolk!!!");
 			return;
+		}
+		try{
+			Thread.sleep(300);
+		}catch(InterruptedException e){
+			e.printStackTrace();
 		}
 		doSave();
 		changed = false;
 	}
 
-	private void doSave() throws IOException {
+	private synchronized void doSave() throws IOException {
 		System.out.println(Thread.currentThread().getName() + " calls doSave, content = " + content );
 		Writer writer = new FileWriter(filename);
 		writer.write(content);
