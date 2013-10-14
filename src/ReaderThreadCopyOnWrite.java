@@ -1,0 +1,17 @@
+import java.util.List;
+
+
+public class ReaderThreadCopyOnWrite extends Thread{
+	private final List<Integer> list;
+	public ReaderThreadCopyOnWrite(List<Integer> list){
+		super("ReaderThread");
+		this.list = list;
+	}
+	public void run(){
+		while(true){
+			for(int n : list){
+				System.out.println(n);
+			}
+		}
+	}
+}
