@@ -1,7 +1,9 @@
+package Section6;
 
-public class Section6ReaderThread extends Thread{
-	private final RWData data;
-	public Section6ReaderThread(RWData data){
+
+public class ReaderThread extends Thread{
+	private final Data data;
+	public ReaderThread(Data data){
 		this.data = data;
 	}
 	public void run(){

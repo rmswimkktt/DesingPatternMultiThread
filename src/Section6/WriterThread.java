@@ -1,12 +1,14 @@
+package Section6;
+
 import java.util.Random;
 
 
-public class Section6WriterThread extends Thread{
+public class WriterThread extends Thread{
 	private static final Random random = new Random();
-	private final RWData data;
+	private final Data data;
 	private final String filler;
 	private int index = 0;
-	public Section6WriterThread(RWData data, String filler){
+	public WriterThread(Data data, String filler){
 		this.data = data;
 		this.filler = filler;
 	}
