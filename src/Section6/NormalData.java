@@ -10,19 +10,19 @@ public class NormalData implements Data{
 		}
 	}
 	public char[] read() throws InterruptedException{
-		lock.readLock();
+//		lock.readLock();
 		try{
 			return doRead();
 		}finally{
-			lock.readUnlock();
+//			lock.readUnlock();
 		}
 	}
 	public void write(char c) throws InterruptedException{
-		lock.writeLock();
+//		lock.writeLock();
 		try{
 			doWrite(c);
 		}finally{
-			lock.writeUnlock();
+//			lock.writeUnlock();
 		}
 	}
 	private char[] doRead(){
