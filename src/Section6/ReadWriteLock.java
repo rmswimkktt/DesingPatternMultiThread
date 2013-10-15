@@ -1,7 +1,7 @@
 package Section6;
 
 
-public class ReadWriterLock {
+public class ReadWriteLock {
 	private int readingReaders = 0;
 	private int waitingWriters = 0;
 	private int writingWriters = 0;
