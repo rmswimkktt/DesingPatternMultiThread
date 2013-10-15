@@ -1,10 +1,12 @@
+package Section6;
+
 import java.util.concurrent.locks.ReadWriteLock;
 
 
-public class RWData {
+public class Data {
 	private final char[] buffer;
 	private final ReadWriterLock lock = new ReadWriterLock();
-	public RWData(int size){
+	public Data(int size){
 		this.buffer = new char[size];
 		for(int i = 0; i < buffer.length; i++){
 			buffer[i] = '*';
