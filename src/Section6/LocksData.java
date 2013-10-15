@@ -16,21 +16,11 @@ public class LocksData implements Data{
 			buffer[i] = '*';
 		}
 	}
-	public char[] read() throws InterruptedException{
-		readLock.lock();
-		try{
-			return doRead();
-		}finally{
-			readLock.unlock();
-		}
+	public synchronized char[] read() throws InterruptedException{
+		return doRead();
 	}
-	public void write(char c) throws InterruptedException{
-		writeLock.lock();
-		try{
-			doWrite(c);
-		}finally{
-			writeLock.unlock();
-		}
+	public synchronized void write(char c) throws InterruptedException{
+		doWrite(c);
 	}
 	private char[] doRead(){
 		char[] newbuf = new char[buffer.length];
