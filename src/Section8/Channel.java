@@ -50,5 +50,11 @@ public class Channel {
 		notifyAll();
 		return request;
 	}
+
+	public void stopAllWorkers() {
+		for(WorkerThread workerThread : threadPool){
+			workerThread.interrupt();
+		}
+	}
 	
 }

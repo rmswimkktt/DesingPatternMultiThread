@@ -20,5 +20,8 @@ public class ClientThread extends Thread {
 		}catch(InterruptedException e){
 		}
 	}
+	public void stopThread() {
+		interrupt();
+	}
 	
 }
