@@ -20,16 +20,25 @@ public class MiniServer {
 				System.out.println("Accepting");
 				Socket clientSocket = serverSocket.accept();
 				System.out.println("Connecting to " + clientSocket);
-				try{
-					Service.service(clientSocket);
-				}catch(IOException e){
-					e.printStackTrace();
-				}
+				new Thread(new ClientThread(clientSocket)).start();
 			}
 		}catch(IOException e){
 			e.printStackTrace();
 		}finally{
 			serverSocket.close();
+		}
+	}
+	public class ClientThread implements Runnable{
+		private final Socket clientSocket;
+		public ClientThread(final Socket clientSocket){
+			this.clientSocket = clientSocket;
+		}
+		public void run() {
+			try {
+				Service.service(clientSocket);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 }
