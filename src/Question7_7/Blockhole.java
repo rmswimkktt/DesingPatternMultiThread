@@ -11,21 +11,29 @@ public class Blockhole {
 	}
 
 	private static void magic(final Object obj) {
-		synchronized (obj) {
-			new Thread(new Runnable() {
-				public void run() {
-					synchronized (obj) {
-						while(true){
-								try {
-									Thread.sleep(1000);
-								} catch (InterruptedException e) {
-									// TODO Auto-generated catch block
-									e.printStackTrace();
-								}
-						}
+		Thread thread = new Thread(){
+			public void run() {
+				synchronized (obj) {
+					synchronized (this) {
+						this.setName("Start");
+						this.notify();
+					}
+					while(true){
 					}
 				}
-			}).start();
+			}
+		};
+		synchronized (thread) {
+			thread.setName("NotStart");
+			thread.start();
+			while(thread.getName().equals("NotStart")){
+				try {
+					thread.wait();
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
 		}
 	}
 }
