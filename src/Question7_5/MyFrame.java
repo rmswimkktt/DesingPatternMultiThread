@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 public class MyFrame extends JFrame implements ActionListener{
+	private Thread thread;
 	public MyFrame() {
 		super("MyFrame");
 		getContentPane().setLayout(new FlowLayout());
@@ -20,7 +21,17 @@ public class MyFrame extends JFrame implements ActionListener{
 		pack();
 		setVisible(true);
 	}
-	public void actionPerformed(ActionEvent e) {
-		Service.service();
+	private void init(){
+		thread = new Thread(new Runnable() {
+			public void run() {
+				Service.service();
+			}
+		});
+	}
+	public synchronized void actionPerformed(ActionEvent e) {
+		if(thread == null || !thread.isAlive()){
+			init();
+			thread.start();
+		}
 	}
 }
