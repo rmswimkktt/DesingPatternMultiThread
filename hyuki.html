@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="Shift_JIS" />
+    <title>結城浩 - The Essence of Programming (プログラミングのエッセンス)</title>
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+    <link rel="index" href="index.html" />
+    <meta http-equiv="content-style-type" content="text/css" />
+    <meta http-equiv="content-script-type" content="text/javascript" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.hyuki.com/d/rss.xml" />
+    <link href="common/style2.css" type="text/css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta name="description" content="プログラマ＆ライター、結城浩の個人サイト。プログラミングや文章書きに関する情報と、気軽な読み物。" />
+    <meta name="keywords" content="結城浩,Hiroshi Yuki,プログラミング,コンピュータ,数学,アルゴリズム,Java,Perl,C,キリスト教,クリスチャン,文章,メンタルヘルス" />
+    <style type="text/css">
+h1.toptitle{
+    text-align: left;
+    text-shadow:2px 2px 2px #dddddd;
+    font-size: xx-large;
+}
+    </style>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30550699-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    <meta name="google-site-verification" content="kKhA0iIGt74w20pR1FGKFy9VVrWklgmgzWwG9B3tQNU" />
+
+</head>
+<body>
+<table summary="navi layout" border="0" cellpadding="5" cellspacing="0" width="100%" class="navigation">
+    <tr class="pathnavigation">
+        <td>
+            <a style="decoration: none;" href="http://www.hyuki.com/"><img src="icon/50x42trans.png" height="100%" /></a>
+            <h1 style="margin: 10px; vertical-align: top; display:inline;" class="toptitle">結城浩のホームページ</h1>
+        </td><td align="right">
+        </td>
+    </tr>
+    <tr class="localnavigation">
+        <td>
+            <img src="images/spacer.png" height="10pt" />
+        </td><td align="right">
+            <a title="Twitter(@hyuki)" href="https://twitter.com/hyuki/">Twitter</a> |
+            <a title="結城浩の日記へ" href="http://www.hyuki.com/d/">日記</a>
+        </td>
+    </tr>
+</table>
+<div class="container clearfix"><div class="grid1 first">
+<img src="http://www.hyuki.com/images/spacer.png" width="1" height="1" />
+</div><div class="grid10">
+<div id="cse" style="font-size: large; width: 100%;">Loading</div>
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">
+  google.load('search', '1', {language : 'ja', style : google.loader.themes.V2_DEFAULT});
+  google.setOnLoadCallback(function() {
+    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
+      '009341103369707015618:WMX1139790499', customSearchOptions);
+    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+    var options = new google.search.DrawOptions();
+    options.setAutoComplete(true);
+    customSearchControl.draw('cse', options);
+  }, true);
+</script>
+
+</div></div>
+<h2 class="section"><a name="i1" id="i1">理想の数学対話を求めて。</a></h2>
+<div class="container clearfix"><div class="grid4 first">
+<p><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4797373253/hyuki-22/"><img src="http://www.hyuki.com/girl/png/birthcover2.png" width="100%" alt="" title="『数学ガールの誕生』（アマゾンへ）" /></a></p><p><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4797373253/hyuki-22/"><img alt="[amazon]" title="アマゾンの詳細ページへ" src="http://www.hyuki.com/images/amazon-detail.gif" width="164" height="28" /></a></p>
+</div><div class="grid8">
+<p><em>『数学ガールの誕生』</em>は、
+結城浩はじめての講演集です。
+</p><p>「数学ガール」シリーズ誕生の秘密と魅力が明らかに。
+</p>
+<ul><li>
+「数学ガール」がどのようにして誕生したか
+</li>
+<li>
+「数学ガール」が読みやすくわかりやすいのはなぜか
+</li>
+<li>
+「数学ガール」に描かれている「教える姿勢・学ぶ姿勢」とは何か
+</li></ul><p>教える人、書く人、考える人に必見の一冊です。
+</p><p><a href="http://www.hyuki.com/girl/birth.html">≫ もっと詳しく…</a>
+</p>
+</div></div>
+
+
+<h2 class="section"><a name="i2" id="i2">数学を始めよう。</a></h2>
+<div class="container clearfix"><div class="grid4 first">
+<p><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4797374144/hyuki-22/"><img src="http://www.hyuki.com/girl/jpg/note1img.jpg" width="100%" alt="" title="『数学ガールの秘密ノート／式とグラフ』（アマゾンへ）" /></a></p><p><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4797374144/hyuki-22/"><img alt="[amazon]" title="アマゾンの詳細ページへ" src="http://www.hyuki.com/images/amazon-detail.gif" width="164" height="28" /></a></p>
+</div><div class="grid8">
+<p><em>『数学ガールの秘密ノート／式とグラフ』</em>は、新シリーズ書籍第一弾。
+</p><p>数学ガールたちと、やさしい数学トークを楽しみましょう！
+</p><p><a href="http://www.hyuki.com/girl/note1.html">≫ もっと詳しく…</a>
+</p>
+</div></div>
+
+<h2 class="section"><a name="i3" id="i3">正確で読みやすい文章を書くために。</a></h2>
+<div class="container clearfix"><div class="grid4 first">
+<p><a href="http://www.amazon.co.jp/exec/obidos/ASIN/448009525X/mathwrite-22/"><img src="http://www.hyuki.com/mw/jpg/mwcover.jpg" width="100%" alt="" title="『数学文章作法 基礎編』（アマゾンへ）" /></a></p><p><a href="http://www.amazon.co.jp/exec/obidos/ASIN/448009525X/mathwrite-22/"><img alt="[amazon]" title="アマゾンの詳細ページへ" src="http://www.hyuki.com/images/amazon-detail.gif" width="164" height="28" /></a></p>
+</div><div class="grid8">
+<p>本書『数学文章作法（さくほう） 基礎編』では、
+「<em>正確で読みやすい文章を書く心がけ</em>」
+をお話しします。
+数式まじりの説明文が題材の中心ですが、
+<em>説明文を書く人ならどなたにも役立つ内容</em>です。
+</p><p>結城浩 著
+</p><p>筑摩書房　ちくま学芸文庫
+</p><p>2013年4月10日刊行
+</p><p>定価998円（税込）
+</p>
+<ul><li>
+はじめに
+</li>
+<li>
+第1章　読者
+</li>
+<li>
+第2章　基本
+</li>
+<li>
+第3章　順序と階層
+</li>
+<li>
+第4章　数式と命題
+</li>
+<li>
+第5章　例
+</li>
+<li>
+第6章　問いと答え
+</li>
+<li>
+第7章　目次と索引
+</li>
+<li>
+第8章　たったひとつの伝えたいこと
+</li>
+<li>
+参考文献
+</li>
+<li>
+索引
+</li></ul></div></div>
+<h2 class="section"><a name="i4" id="i4">「数学ガール」シリーズ。</a></h2>
+<div class="container clearfix"><div class="grid6 first">
+<p><a href="http://www.hyuki.com/girl/"><img width="460" src="http://www.hyuki.com/images/mathgirl1.png" /></a>
+</p>
+</div><div class="grid6">
+<p>『数学ガール』は、
+ミルカさん＋テトラちゃん＋「僕」という三人の高校生と、
+中学生のユーリが、ひとあじ違う数学にチャレンジする楽しい物語。
+</p><p>読み物形式でありながら、取り扱う数学的内容は本格的。
+</p><p>学生さんから社会人まで大人気のシリーズです。
+</p><p><a href="http://www.hyuki.com/girl/">≫ もっと詳しく…</a>
+</p>
+</div></div>
+<h2 class="section"><a name="i5" id="i5">「数学ガール」シリーズの最新刊は、ガロア理論。</a></h2>
+<div style="text-align: center;">
+<div class="container clearfix"><div class="grid2 first">
+<p><em>オイラー</em>
+</p><p><a href="http://www.hyuki.com/girl/euler.html"><img width="140" src="http://www.hyuki.com/girl/girl.jpg" width="120" alt="" title="第1巻『数学ガール』" /></a>
+</p>
+</div><div class="grid2">
+<p><em>フェルマー</em>
+</p><p><a href="http://www.hyuki.com/girl/fermat.html"><img width="140" src="http://www.hyuki.com/girl/girl2.jpg" width="120" alt="" title="第2巻『数学ガール／フェルマーの最終定理』" /></a>
+</p>
+</div><div class="grid2">
+<p><em>ゲーデル</em>
+</p><p><a href="http://www.hyuki.com/girl/goedel.html"><img width="140" src="http://www.hyuki.com/girl/girl3.jpg" width="120" alt="" title="第3巻『数学ガール／ゲーデルの不完全性定理』" /></a>
+</p>
+</div><div class="grid2">
+<p><em>アルゴリズム</em>
+</p><p><a href="http://www.hyuki.com/girl/random.html"><img width="140" src="http://www.hyuki.com/girl/girl4.jpg" width="120" alt="" title="第4巻『数学ガール／乱択アルゴリズム』" /></a>
+</p>
+</div><div class="grid2">
+<p><em>ガロア</em>
+</p><p><a href="http://www.hyuki.com/girl/galois.html"><img width="140" src="http://www.hyuki.com/girl/girl5.jpg" width="120" alt="" title="第5巻『数学ガール／ガロア理論』" /></a>
+</p>
+</div></div>
+</div>
+
+<h2 class="section"><a name="i6" id="i6">コミックスでも、数学ガールに会える。</a></h2>
+<div class="container clearfix"><div class="grid2 first">
+<p><a href="http://www.hyuki.com/girl/comic.html"><img width="140" src="http://www.hyuki.com/images/comic11thumb.jpg" width="120" alt="" title="コミック版『数学ガール（上）』" /></a>
+</p>
+</div><div class="grid2">
+<p><a href="http://www.hyuki.com/girl/comic.html"><img width="140" src="http://www.hyuki.com/images/comic12thumb.jpg" width="120" alt="" title="コミック版『数学ガール（下）』" /></a>
+</p>
+</div><div class="grid2">
+<p><a href="http://www.hyuki.com/girl/comic2.html"><img width="140" src="http://www.hyuki.com/images/comic21thumb.jpg" width="120" alt="" title="コミック版『数学ガール　フェルマーの最終定理(1)』" /></a>
+</p>
+</div><div class="grid2">
+<p><a href="http://www.hyuki.com/girl/comic2.html"><img width="140" src="http://www.hyuki.com/images/comic22thumb.jpg" width="120" alt="" title="コミック版『数学ガール　フェルマーの最終定理(2)』" /></a>
+</p>
+</div><div class="grid2">
+<p><a href="http://www.hyuki.com/girl/comic3.html"><img width="140" src="http://www.hyuki.com/images/comic31thumb.jpg" width="120" alt="" title="コミック版『数学ガール　ゲーデルの不完全性定理(1)』" /></a>
+</p>
+</div><div class="grid2">
+<p><a href="http://www.hyuki.com/girl/comic3.html"><img width="140" src="http://www.hyuki.com/images/comic32thumb.jpg" width="120" alt="" title="コミック版『数学ガール　ゲーデルの不完全性定理(2)』" /></a>
+</p>
+</div></div>
+
+<h2 class="section"><a name="i7" id="i7">火曜日は、結城メルマガの日。</a></h2>
+<div class="container clearfix"><div class="grid7 first">
+<p><a href="http://www.hyuki.com/mm/"><img width="100%" src="http://com.res.nimg.jp/material/1871947/channel_banner4.jpg" /></a>
+</p>
+</div><div class="grid5">
+<p><em>結城メルマガ</em>は毎週火曜日、朝7時に届きます。
+</p><p></p>
+<ul><li>
+文章を書くヒント
+</li>
+<li>
+人に教えるときのくふう
+</li>
+<li>
+本を書く心がけ
+</li>
+<li>
+コミュニケーションのパターンランゲージ
+</li>
+<li>
+執筆途中の書籍プレビュー
+</li></ul><p><a href="http://www.hyuki.com/mm/">≫ もっと詳しく…</a>
+</p>
+</div></div>
+
+<h2 class="section"><a name="i8" id="i8">金曜日は、『数学ガールの秘密ノート』の日。</a></h2>
+<div class="container clearfix"><div class="grid3 first">
+<p><a href="http://www.hyuki.com/girl/note.html"><img width="100%" src="http://www.hyuki.com/girl/png/girlnote_480x480.png" /></a>
+</p>
+</div><div class="grid6">
+<p><em>Web連載『数学ガールの秘密ノート』</em>は、
+「数学ガール」シリーズでおなじみのミルカさんやテトラちゃんたちが、
+対話形式で数学用語を解説する楽しい読み物です。
+</p><p>毎週金曜日、cakes（ケイクス）で連載中！
+</p><p><a href="http://www.hyuki.com/girl/note.html">≫ もっと詳しく…</a>
+</p>
+</div></div>
+
+
+<h2 class="section"><a name="i9" id="i9">数学を、楽しく学ぼう。</a></h2>
+<div class="container clearfix"><div class="grid3 first">
+<p><a href="http://www.hyuki.com/math/"><img width="100%" src="http://www.hyuki.com/images/mathbook1.png" /></a>
+</p><p><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4797329734/hyuki-22/"><img alt="[amazon]" title="アマゾンの詳細ページへ" src="http://www.hyuki.com/images/amazon-detail.gif" width="164" height="28" /></a></p>
+</div><div class="grid9">
+<p><em>『プログラマの数学』</em>は、プログラミングに助けとなる「数学的な考え方」を学ぶ本です。
+</p><p>わかりやすい説明、たくさんの図、楽しいクイズやパズルを通して、
+</p><p>プログラミングに役立つ「数学的な考え方」を学びましょう。
+</p><p><a href="http://www.hyuki.com/math/">≫ もっと詳しく…</a></p>
+</div></div>
+
+<h2 class="section"><a name="i10" id="i10">プログラミングを、しっかり学ぼう。</a></h2>
+<div class="container clearfix"><div class="grid3 first">
+<p><a href="http://www.hyuki.com/jb/"><img  width="180" src="http://www.hyuki.com/jb/jb3a.png" /></a>
+</p>
+</div><div class="grid3">
+<p><a href="http://www.hyuki.com/pb/"><img  width="180" src="http://www.hyuki.com/pb/pb12.gif" /></a>
+</p>
+</div><div class="grid3">
+<p><a href="http://www.hyuki.com/lc/"><img  width="180" src="http://www.hyuki.com/lc/lc13.gif" /></a>
+</p>
+</div></div>
+
+<h2 class="section"><a name="i11" id="i11">デザインパターンを身につけよう。</a></h2>
+<div class="container clearfix"><div class="grid3 first">
+<p><a href="./dp/"><img width="100%" src="http://www.hyuki.com/images/dp1.png"></a>
+</p><p><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4797327030/hyuki-22/"><img alt="[amazon]" title="アマゾンの詳細ページへ" src="http://www.hyuki.com/images/amazon-detail.gif" width="164" height="28" /></a></p>
+</div><div class="grid9">
+<p>Javaを通して<em>デザインパターン</em>を身につけよう。
+</p><p>なかなか勉強の機会がつかめない方。
+</p><p>本を読んだけれど「何だか、難しそう」と感じた方。
+</p><p>抽象クラスやインタフェースがわかりにくいという方。
+</p><p>オブジェクト指向を体験的に「つかんで」いない方。
+</p><p>本書は、そんな方にお勧めです。
+</p><p><a href="http://www.hyuki.com/dp/">≫ もっと詳しく…</a></p>
+</div></div>
+
+<h2 class="section"><a name="i12" id="i12">マルチスレッドに挑戦！</a></h2>
+<div class="container clearfix"><div class="grid3 first">
+<p><a href="./dp/dp2.html"><img width="100%" src="http://www.hyuki.com/images/dp2.png"></a>
+</p><p><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4797331623/hyuki-22/"><img alt="[amazon]" title="アマゾンの詳細ページへ" src="http://www.hyuki.com/images/amazon-detail.gif" width="164" height="28" /></a></p>
+</div><div class="grid9">
+<p>本書は<em>マルチスレッドプログラミング</em>をやさしく解説します。
+</p><p>Javaのスレッドの基本から書き起こし、
+</p><p>マルチスレッドプログラミングによく登場するパターンを解説します。
+</p><p><a href="http://www.hyuki.com/dp/dp2.html">≫ もっと詳しく…</a></p>
+</div></div>
+
+<h2 class="section"><a name="i13" id="i13">ステップ・バイ・ステップで設計改善。</a></h2>
+<div class="container clearfix"><div class="grid3 first">
+<p><a href="http://www.hyuki.com/ref/"><img width="100%" src="http://www.hyuki.com/images/ref1.png" /></a>
+</p><p><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4797337990/hyuki-22/"><img alt="[amazon]" title="アマゾンの詳細ページへ" src="http://www.hyuki.com/images/amazon-detail.gif" width="164" height="28" /></a></p>
+</div><div class="grid9">
+<p>Java言語で<em>リファクタリング</em>を学びましょう。
+</p><p>きれいなソースは読むのが楽で、修正するのが楽で、デバッグするのが楽です。
+</p><p>どうすれば「きれいなソース」になるのでしょう。
+</p><p>それに対する試みがリファクタリングです。
+</p><p>本書でリファクタリングを学びましょう。
+</p><p><a href="http://www.hyuki.com/ref/">≫ もっと詳しく…</a></p>
+</div></div>
+
+<h2 class="section"><a name="i14" id="i14">暗号技術は、現代の必須科目。</a></h2>
+<div class="container clearfix"><div class="grid3 first">
+<p><a href="./cr/"><img width="100%" src="http://www.hyuki.com/images/cr1.png" /></a>
+</p><p><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4797350997/hyuki-22/"><img alt="[amazon]" title="アマゾンの詳細ページへ" src="http://www.hyuki.com/images/amazon-detail.gif" width="164" height="28" /></a></p>
+</div><div class="grid9">
+<p>暗号技術はたくさんの技術が絡み合っています。
+</p><p>対称暗号、公開鍵暗号、デジタル署名、一方向ハッシュ関数、メッセージ認証コード、擬似乱数生成器、PKI、PGP、SSL/TLS…。
+</p><p>本書は、たくさんの図と やさしい文章で暗号技術を解きほぐします。
+</p><p><a href="http://www.hyuki.com/cr/">≫ もっと詳しく…</a></p>
+</div></div>
+
+
+<h2 class="section"><a name="i15" id="i15">アマゾンに、結城浩の著者ページがあります。</a></h2>
+<div class="container clearfix"><div class="grid12 first">
+<p><a href="http://www.amazon.co.jp/%E7%B5%90%E5%9F%8E%E6%B5%A9/e/B003UW60OA/?_encoding=UTF8&tag=hyuki-22&linkCode=ur2&camp=247&creative=7399"><img title="結城浩の著者ページ（アマゾン）" src="http://www.hyuki.com/images/amazon.png" /></a>
+</p>
+</div></div>
+
+<h2 class="section"><a name="i16" id="i16">Kindleストアに、本を出しました。</a></h2>
+<div class="container clearfix"><div class="grid2 first">
+<p><a href="https://bit.ly/kmatchgirl"><img width="100%" title="マッチ売りの少女" src="http://www.hyuki.com/images/match.jpg" /></a>
+</p>
+</div><div class="grid2">
+<p><a href="https://bit.ly/happyprince"><img width="100%" src="http://www.hyuki.com/images/prince.jpg" /></a>
+</p>
+</div><div class="grid2">
+<p><a href="https://bit.ly/kselfish"><img width="100%" src="http://www.hyuki.com/images/selfish.jpg" /></a>
+</p>
+</div><div class="grid2">
+<p><a href="https://bit.ly/kindlemagi"><img width="100%" src="http://www.hyuki.com/images/magi.jpg" /></a>
+</p>
+</div><div class="grid2">
+<p><a href="https://bit.ly/kindleleaf"><img width="100%" src="http://www.hyuki.com/images/leaf.jpg" /></a>
+</p>
+</div><div class="grid2">
+<p><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00AIZ3NFQ/hyuki-22/"><img width="100%" src="http://www.hyuki.com/images/ehonpat.jpg" /></a>
+</p>
+</div></div>
+<div class="container clearfix"><div class="grid12 first">
+<p><a href="http://www.hyuki.com/pub/kdp.html">≫ もっと詳しく…</a></p>
+</div></div>
+
+
+<h2 class="section"><a name="i17" id="i17">心の健康を守るために。</a></h2>
+<div style="text-align: center;">
+<div class="container clearfix"><div class="grid2 first">
+<p><em>プログラマの<br />心の健康</em>
+</p><p><a href="http://www.hyuki.com/kokoro/"><img width="100%" src="http://www.hyuki.com/images/heart.png" /></a>
+</p>
+</div><div class="grid2">
+<p><em>王様の耳は<br />ロバの耳</em>
+</p><p><a href="http://www.hyuki.com/roba/"><img width="100%" src="http://www.hyuki.com/roba/robalogo.gif" /></a>
+</p>
+</div></div>
+</div>
+
+
+<h2 class="section"><a name="i18" id="i18">信仰と、希望と、愛。</a></h2>
+<div style="text-align: center;">
+<div class="container clearfix"><div class="grid3 first">
+<p><a href="http://www.hyuki.com/pray/">あなたのために、<br />祈ります</a>
+</p>
+</div><div class="grid3">
+<p><a href="http://www.hyuki.com/bible/">聖書の言葉</a>
+</p>
+</div><div class="grid3">
+<p><a href="http://www.hyuki.com/church/">教会へ行きたい</a>
+</p>
+</div><div class="grid3">
+<p><a title="イエス・キリストがあなたに与える救いについて" href="http://www.hyuki.com/four/laws.html">豊かな人生のための<br />四つの法則</a>
+</p>
+</div></div>
+</div>
+
+
+<h2 class="section"><a name="i19" id="i19">結城浩って、だれ？</a></h2>
+<div style="text-align: center;">
+<div class="container clearfix"><div class="grid2 first">
+<p><em>プロフィール</em>
+</p><p><a title="プロフィール" href="http://www.hyuki.com/info/profile.html"><img width="120" src="http://www.hyuki.com/icon/100x100.gif" /></a>
+</p>
+</div><div class="grid2">
+<p><em>結城浩の日記</em>
+</p><p><a title="結城浩の日記" href="http://www.hyuki.com/d/"><img width="120" src="http://www.hyuki.com/images/blog.png" /></a>
+</p>
+</div><div class="grid2">
+<p><em>結城浩が書いた本</em>
+</p><p><a title="結城浩の著書一覧" href="http://www.hyuki.com/pub/books.html"><img width="120" src="http://www.hyuki.com/images/pub.png" /></a>
+</p>
+</div></div>
+</div>
+
+
+<h2 class="section"><a name="i20" id="i20">連絡先</a></h2>
+<div style="text-align: center;">
+<div class="container clearfix"><div class="grid2 first">
+<p><em>ご感想</em>
+</p><p><a title="感想を送るWebフォームへ" href="http://www.hyuki.com/d/#feed"><img width="120" src="http://www.hyuki.com/images/message.png" /></a>
+</p>
+</div><div class="grid2">
+<p><em>Twitter</em>
+</p><p><a title="結城浩のTwitterへ" href="https://twitter.com/#!/hyuki/"><img width="120" alt="Twitter" src="http://www.hyuki.com/images/twitter.png" /></a>
+</p>
+</div><div class="grid2">
+<p><em>Facebook</em>
+</p><p><a title="結城浩のFacebookへ" href="https://www.facebook.com/hyuki0000/"><img width="120" alt="Facebook" src="http://www.hyuki.com/images/facebook.png" /></a>
+</p>
+</div><div class="grid5">
+<p><em>お仕事関連</em>
+</p><p><img width="100%" src="http://www.hyuki.com/images/mail1.png" />
+</p>
+</div></div>
+</div>
+
+<div class="footer">
+<hr />
+<div class="footer_index">
+<div class="container clearfix"><div class="grid3 first">
+<h2 class="section"><a name="i21" id="i21">Reading Material</a></h2>
+<ul><li>
+<a href="http://www.hyuki.com/mm/">メルマガ</a>
+</li>
+<li>
+<a href="http://www.hyuki.com/writing/">結城浩の心がけ</a>
+</li>
+<li>
+<a href="http://www.hyuki.com/dig/">日記ダイジェスト</a>
+</li>
+<li>
+<a href="http://www.hyuki.com/story/">心の物語</a>
+</li>
+<li>
+<a href="http://www.hyuki.com/vtalk/">夢の中の対話</a>
+</li>
+<li>
+<a href="http://www.hyuki.com/tale/">むかしむかし、あるところに</a>
+</li>
+<li>
+<a href="http://www.hyuki.com/trans/">翻訳</a>
+</li>
+<li>
+<a href="http://www.hyuki.com/wl/">文章教室</a>
+</li>
+<li>
+<a href="http://www.hyuki.com/remix/">ReMix</a>
+</li>
+<li>
+<a href="http://www.hyuki.com/techinfo/">技術情報</a>
+</li></ul></div><div class="grid3">
+<h2 class="section"><a name="i22" id="i22">Blog &amp; Contact</a></h2>
+<ul><li>
+<a href="http://www.hyuki.com/d/">結城浩の日記</a>
+</li>
+<li>
+<a href="http://d.hatena.ne.jp/hyuki/">結城浩のはてな日記</a>
+</li>
+<li>
+<a href="https://twitter.com/#!/hyuki/">Twitter (@hyuki)</a>
+</li>
+<li>
+<a href="https://www.facebook.com/hyuki0000/">Facebook (結城浩)</a>
+</li>
+<li>
+<a href="http://theinterviews.jp/hyuki/">Interviews</a>
+</li>
+<li>
+<a href="http://hyuki.tumblr.com/">Tumblr</a>
+</li>
+<li>
+<a href="http://www.hyuki.com/d/#feed">Feedback</a>
+</li>
+<li>
+<a href="http://www.hyuki.com/info/eprofile.html">English</a>
+</li></ul></div><div class="grid3">
+<h2 class="section"><a name="i23" id="i23">Prayer &amp; Christianity</a></h2>
+<ul><li>
+<a href="http://www.hyuki.com/roba/">王様の耳はロバの耳</a>
+</li>
+<li>
+<a href="http://www.hyuki.com/pray/">あなたのために、祈ります</a>
+</li>
+<li>
+<a href="http://www.hyuki.com/bible/">聖書の言葉</a>
+</li>
+<li>
+<a href="http://www.hyuki.com/church/">教会・聖書</a>
+</li>
+<li>
+<a title="イエス・キリストがあなたに与える救いについて" href="http://www.hyuki.com/four/laws.html">豊かな人生のための四つの法則</a>
+</li></ul></div><div class="grid3">
+<h2 class="section"><a name="i24" id="i24">About</a></h2>
+<ul><li>
+<a href="http://www.hyuki.com/d/#feed">Feedback</a>
+</li></ul></div></div>
+<div style="height:2em;"><img src="http://www.hyuki.com/images/spacer.png" width="1" height="1" /></div>
+<div class="container clearfix"><div class="grid3 first">
+<h2 class="section"><a name="i25" id="i25">Credit</a></h2>
+<ul><li>
+<a href="http://www.yootheme.com/icons">yootheme</a>
+</li>
+<li>
+<a href="http://www.iconfinder.com/search/?q=iconset%3ADarkGlass_Reworked">DarkGlass</a>
+</li></ul></div></div>
+</div><!-- footer_index -->
+<hr />
+</div><!-- footer -->
+</body>
+</html>
